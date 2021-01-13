@@ -1,0 +1,94 @@
+@import './normalize.css';
+
+/*:root用于获取根元素Html*/
+/*--color-text是CSS中定义变量的方式*/
+/*在实际style中通过"font-size: var(变量名)"来使用变量*/
+:root {
+  --color-text: #333; /*文字的颜色*/
+  --color-high-text: #ff5777; /*文字高亮颜色*/
+  --color-tint: #ff8198; /*整体主题颜色：如导航条背景等*/
+  --color-background: #fff;
+  --font-size: 14px;
+  --line-heigh: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
+big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time,
+mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", simSun, Arial, sans-serif;
+  user-select: none; /*禁止用户鼠标在页面上选中文字、图片等*/
+  -webkit-tap-highlight-color: transparent; /*webkit苹果浏览器引擎，tap点击、highlight背景高亮、color颜色*/
+  background: var(--color-background);
+  color: var(--color-text);
+  /*rem vw/vh*/
+  width: 100vw;
+  margin: 8px;
+  font-size: 14px;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.clear-fix::after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.node-endpoint-dot {
+  margin-right: 50px;
+}
+
+.jtk-endpoint {
+  z-index: 11;
+}
+
+.jtk-endpoint:not(.jtk-drag-active) {
+  margin-left: 50px;
+}
