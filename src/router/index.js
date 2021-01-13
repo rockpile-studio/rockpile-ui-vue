@@ -1,23 +1,27 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
+
+const IndexPage  = () => import('../views/index')
+const DiagramDesign = () => import('../views/DiagramDesign/DiagramDesign')
+const Home = () => import('../views/Home/Home')
+const Profile = () => import('../views/Profile/Profile')
+const Draggable = () => import('../views/Draggable/Draggable')
+
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    meta: {title: '首页'},
+    redirect: '/index' /*redirect重定向*/
   },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+
+  {path: '/index', meta: {title: '引导页'}, component: IndexPage},
+  {path: '/home', meta: {title: '首页'}, component: Home},
+  {path: '/profile', meta: {title: '个人中心'}, component: Profile},
+  {path: '/draggable', meta: {title: '拖拽示例'}, component: Draggable},
+  {path: '/diagram-design', meta: {title: '可视化设计'}, component: DiagramDesign}
 ]
 
 const router = new VueRouter({

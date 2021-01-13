@@ -1,4 +1,4 @@
-# rockpile-ui-vue
+# web-app
 
 ## Project setup
 ```
