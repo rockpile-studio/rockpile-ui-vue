@@ -4,7 +4,7 @@
     <div class="app-head">
       <div class="app-head-inner">
         <img src="@/assets/img/logo.png">
-        <!-- 顶部 navigation 导航 -右侧 -->
+        <!-- 顶部导航 navigation -->
         <div class="head-nav">
           <ul class="nav-list">
             <li>登陆</li>

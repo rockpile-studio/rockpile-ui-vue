@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const IndexPage  = () => import('../views/index')
+const Index = () => import('../views/index')
 const DiagramDesign = () => import('../views/DiagramDesign/DiagramDesign')
 const Home = () => import('../views/Home/Home')
 const Profile = () => import('../views/Profile/Profile')
@@ -17,7 +17,8 @@ const routes = [
     redirect: '/index' /*redirect重定向*/
   },
 
-  {path: '/index', meta: {title: '引导页'}, component: IndexPage},
+  {path: '/index', meta: {title: '引导页'}, component: Index},
+
   {path: '/home', meta: {title: '首页'}, component: Home},
   {path: '/profile', meta: {title: '个人中心'}, component: Profile},
   {path: '/draggable', meta: {title: '拖拽示例'}, component: Draggable},

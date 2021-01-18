@@ -1,5 +1,3 @@
-@import './normalize.css';
-
 /*:root用于获取根元素Html*/
 /*--color-text是CSS中定义变量的方式*/
 /*在实际style中通过"font-size: var(变量名)"来使用变量*/
@@ -79,16 +77,4 @@ ol, ul {
 
 .right {
   float: right;
-}
-
-.node-endpoint-dot {
-  margin-right: 50px;
-}
-
-.jtk-endpoint {
-  z-index: 11;
-}
-
-.jtk-endpoint:not(.jtk-drag-active) {
-  margin-left: 50px;
 }
